@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="keywords" content="arquitectura, concursos, padilla, proyectos, tucuman">
+    <meta name="description" content="En la pagina se pueden visualizar proyectos provinciales, nacionales e internacionales. Creo que cada proyecto intenta contar una historia">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="shortcut icon" href="./img/logo 8.png" />
+    <title>Arq. Jose Padilla</title>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  </head>
+  <body class="grilla fondoImg">
+    <header class="header">
+      <a class="navbar-brand" href="#"> <img class="imagenLogo" src="./img/logo 8.png" alt="Logo Bucket"></a>
+      <button id="dark-mode" class="btn btn-primary">Dark/light</button>
+    </header>
+    <section class="primeraSeccion">
+      <!-- Carrousel -->
+      <div class="contenedor">
+        <div class="botonAtras" onclick="carrousel('atras')">
+         <
+        </div>
+        <div class="botonAdelante" onclick="carrousel('adelante')">
+         >
+        </div>
+  
+        <img src="./img/imagenesSlider/baseVariosProyectos.jpg" alt="" id="imagen">
+      </div>
+    </section>
+    <section class="segundaSeccion">
+      <div class="text-center">
+        <h2>Proyectos</h2>
+        <p>
+          Mi nombre es José María Padilla. Nacido en la ciudad de San Miguel de Tucuman - Provincia de Tucuman.
+          En la pagina se pueden visualizar algunos proyectos y concursos tanto provinciales, nacionales e internacionales.
+          Creo que cada proyecto intenta contar una historia., solamente que hay que saber leerla.
+        </p>
+        <h2>Presupuesto</h2>
+    <p>Averigue los honorarios de su obra haciendo click aqui</p>
+    <button id="modal-open" class="btn btn-primary">Presupuesto</button>
+
+        <div id="modal-container" class="modal-container">
+            <div id="modal" class="my-modal">
+                <h2>Presupuesto</h2>
+                <form method="get" id= "formulario" class="form">
+                  <label class="etiquetasFormularios" for="tipoObra">Seleccione si es obra nueva o reforma</label>
+                  <br>
+                  <select id= "inp_tipo" name="tipo">
+                    <option value="reforma">Reforma</option>
+                    <option value="nueva">Nueva</option>
+                  </select>
+                  <br>
+                  <label class="etiquetasFormularios" for="computo">Ingrese los m2 a construir</label>
+                  <br>
+                  <input id= "inp_computo" type="number" name="computo" placeholder="250" />
+                  <br>
+                  <label class="etiquetasFormularios" for="valor">Valor de construccion</label>
+                  <br>
+                  <input id= "inp_valor" type="number" name="valor" placeholder="150000" />
+                  <br><br>
+                  <button type="submit" id="btn-submit" class="btn btn-primary">Submit</button>
+                  <h2 id="honorarios"></h2>
+                </form>
+                <hr>
+                <button id="modal-close" class="btn btn-success">Cerrar</button>
+            </div>
+        </div>
+  </section>
+  <section class="cart">
+    <h2>Carrito</h2><p id="contadorCarrito">0</p>
+    <div id="carrito">
+    </div>
+    <h4 id="totalCarrito">Precio total: $ <span id="precioTotal">0</span></h4>
+    <button id="btn_vaciar" class="btn btn-success">Vaciar Carrito</button>
+    <button id="modal-open2" class="btn btn-primary">COMPRAR</button>
+    <div id="modal-container2" class="modal-container">
+      <div id="modal2" class="my-modal">
+        <form method="get" id= "formulario2" class="form">
+        <label class="etiquetasFormularios" for="nuermo">Numero de Tarjeta</label><br>
+        <input type="text" name="numbercard" id="numbercard" placeholder="Ingrese el numero de la tarjeta"><br>
+        <label class="etiquetasFormularios" for="vencimiento">Vencimiento</label><br>                    
+        <input type="text" name="expday" id="expday" placeholder="Ingrese el vencimiento de la tajeta"><br>
+        <label class="etiquetasFormularios" for="codigo">Codigo de Seguridad</label><br>
+        <input type="text" name="codseg" id="codseg" placeholder="Ingrese el codigo de seguridad"><br>
+        <label class="etiquetasFormularios" for="Nombre">Nombre y Apellido</label><br>
+        <input type="text" name="name" id="name" placeholder="Ingrese el nombre del titular"><br>
+        <button type="submit" class="btn btn-primary" id="btn_finalizar">FINALIZAR COMPRA</button>
+      </form>
+      <button id="modal-close2" class="btn btn-primary">Cerrar</button>
+  </div>
+  </div>
+  </section>
+    <section class="terceraSeccion">
+    <article class="articleProductos">
+      <h2>Productos</h2>
+      <p>Elija sus Productos</p>
+      <button id="btnShow">Show/Hide Products</button>
+      <div id="card_style" class="productos">
+      </div>
+    </article>
+    </div>
+    </div>
+    </section>
+      <footer class="footer">
+        <div>Yerba Buena - Tucuman</div>
+        <div>cel:381-5405224</div>
+        <div>
+          <img class="title-footer__icon imgHover" src="./img/face.svg" alt="" />
+          <img class="title-footer__icon imgHover" src="./img/insta.svg" alt="" />
+          <img class="title-footer__icon imgHover" src="./img/wsp.svg" alt="" />
+        </div>
+      </footer>
+      <script src="./js/app.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+  </body>
+</html>

@@ -1,0 +1,35 @@
+[
+{
+    "id": "1",
+    "product": "Taza",
+    "cantidad": 1,
+    "description": "Taza para futuro arquitecto/a",
+    "price": 1499,
+    "img": "./img/productos/taza.png"
+},
+{
+    "id": "2",
+    "product": "Lapices",
+    "cantidad": 1,
+    "description": "Set Lapices DIbujo Profesional 29 Piezas",
+    "price": 5500,
+    "img": "./img/productos/lapices.png"
+},
+{
+    "id": "3",
+    "product": "Modulor",
+    "cantidad": 1,
+    "description": "Dije El Modulor De Le Corbusier en Plata",
+    "price": 7800,
+    "img": "./img/productos/modulor.png"
+},
+{
+    "id": "4",
+    "product": "Lapicera",
+    "cantidad": 1,
+    "description": "Pluma Monteverde",
+    "price": 10500,
+    "img": "./img/productos/lapicera.png"
+}
+]
+
